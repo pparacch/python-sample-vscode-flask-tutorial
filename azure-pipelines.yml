@@ -6,10 +6,13 @@ jobs:
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-  - script: echo Hello from Ubuntu (latest)!
+  - script: echo "Hello from Ubuntu (latest)!"
+    displayName: 'echo cmd'
+
 
 - job: Windows
   pool:
     vmImage: 'windows-latest'
   steps:
-  - script: echo Hello from Windows (latest)!  
+  - script: echo "Hello from Windows (latest)!"
+    displayName: 'echo cmd'
