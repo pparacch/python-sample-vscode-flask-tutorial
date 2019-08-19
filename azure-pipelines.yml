@@ -19,13 +19,16 @@ jobs:
       python3.7 -m pip install --upgrade pip
       python -m pip install --upgrade setuptools wheel
       
-      echo '\nWHICH python is running:'
+      echo '>>>>>>>Current Working Directory:'
+      pwd
+
+      echo '>>>>>>>WHICH python is running:'
       which python3.7
       
-      echo '\npython version:'
+      echo '>>>>>>>python version:'
       python3.7 --version
 
-      echo '\ninstalled packages:'
+      echo '>>>>>>>installed packages:'
       pip list
 
     displayName: 'Install Dependencies'
