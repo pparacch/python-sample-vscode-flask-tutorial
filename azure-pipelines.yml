@@ -17,8 +17,11 @@ jobs:
       python3.7 -m pip install virtualenv
       virtualenv REAL_FOR_FGO_virtualenv
       source REAL_FOR_FGO_virtualenv/bin/activate
-      which python3.7
-      python3.7 --version
+      VAR_PYTHON_WHICH = which python3.7
+      VAR_PYTHON_VERSION = python3.7 --version
+      echo 'Which python: $VAR_PYTHON_WHICH'
+      echo 'Version python: $VAR_PYTHON_VERSION'
+      displayName: 'Install Dependencies'
       
 
 
