@@ -6,8 +6,20 @@ jobs:
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-  - script: echo "Hello from Ubuntu (latest)!"
-    displayName: 'echo cmd'
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.7'
+      architecture: 'x64'
+      addToPath: true
+  
+  - script: |
+      python3.7 -m pip install --upgrade pip
+      python3.7 -m pip install virtualenv
+      virtualenv REAL_FOR_FGO_virtualenv
+      source REAL_FOR_FGO_virtualenv/bin/activate
+      which python3.7
+      python3.7 --version
+      
 
 
 - job: Windows
