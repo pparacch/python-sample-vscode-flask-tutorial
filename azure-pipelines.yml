@@ -13,13 +13,22 @@ jobs:
       addToPath: true
   
   - script: |
-      python3.7 -m pip install --upgrade pip
       python3.7 -m pip install virtualenv
       virtualenv REAL_FOR_FGO_virtualenv
       source REAL_FOR_FGO_virtualenv/bin/activate
+      python3.7 -m pip install --upgrade pip
+      python -m pip install --upgrade setuptools wheel
+      
+      echo '\nWHICH python is running:'
       which python3.7
+      
+      echo '\npython version:'
       python3.7 --version
-      displayName: 'Install Dependencies'
+
+      echo '\ninstalled packages:'
+      pip list
+
+    displayName: 'Install Dependencies'
       
 
 
