@@ -21,6 +21,7 @@ jobs:
       
       echo '>>>>>>>Current Working Directory:'
       pwd
+      dir
 
       echo '>>>>>>>WHICH python is running:'
       which python3.7
